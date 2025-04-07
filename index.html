@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceynova - Web, Mobile & AI Solutions</title>
+    <title>CeyNova</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -25,12 +25,10 @@
             line-height: 1.6;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            /* Added smooth scrolling for entire body */
         }
 
         html {
             scroll-behavior: smooth;
-            /* Added smooth scrolling for html */
         }
 
         .container {
@@ -39,7 +37,6 @@
             padding: 0 2rem;
         }
 
-        /* Hero Section */
         .hero {
             background: var(--primary-gradient);
             color: white;
@@ -98,7 +95,6 @@
             max-width: 500px;
         }
 
-        /* Section Titles */
         section {
             padding: 5rem 0;
         }
@@ -109,7 +105,6 @@
             margin-bottom: 3rem;
         }
 
-        /* About Section */
         .expertise-container {
             display: flex;
             gap: 1.5rem;
@@ -148,7 +143,6 @@
             color: white;
         }
 
-        /* Services Section */
         #services {
             background-color: #f9fafb;
         }
@@ -200,7 +194,6 @@
             color: black;
         }
 
-        /* Contact Section */
         #contact {
             background-color: white;
         }
@@ -227,7 +220,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Added icon styling */
         .contact-icon {
             font-size: 1.25rem;
             color: #34d399;
@@ -293,11 +285,9 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Success message styling */
         .success-message {
             margin-top: 1rem;
             padding: 0.75rem;
-            /* background-color: #34d399; */
             color: black;
             border-radius: 8px;
             text-align: center;
@@ -305,7 +295,6 @@
             display: none;
         }
 
-        /* Footer Styles */
         footer {
             background-color: #1f2937;
             color: white;
@@ -396,7 +385,6 @@
             opacity: 0.7;
         }
 
-        /* Make it responsive */
         @media (max-width: 1024px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -431,6 +419,11 @@
             .footer-column {
                 flex: 0 0 100%;
             }
+
+            .navbar-link.navbar-button {
+                background: linear-gradient(135deg, #6ee7b7 0%, #60a5fa 100%) !important;
+                color: white !important;
+            }
         }
 
         @media (max-width: 640px) {
@@ -442,7 +435,6 @@
                 background: #f9fafb;
                 color: black;
                 text-align: left;
-                /* Hide "Why choose CeyNova?" card on mobile */
             }
 
             .container {
@@ -458,54 +450,45 @@
                 gap: 2rem;
             }
 
-           
-            /* Standardize all card widths */
-    .expertise-container .card,
-    .client-card {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        box-sizing: border-box;
-    }
-    
-    /* Ensure consistent container padding */
-    .expertise-container {
-        padding: 1rem;
-    }
-    
-    /* Adjust column width for expertise section */
-    .expertise-column {
-        width: 100%;
-        padding: 0;
-    }
-    
-    /* Match padding between both card types */
-    .expertise-container .card {
-        padding: 1.25rem; /* Same as client-card */
-    }
-    
-    /* Apply consistent margin to both card types */
-    .expertise-container .card,
-    .client-card {
-        margin-bottom: 1rem;
-    }
-    
-    /* Remove any custom margins from clients grid */
-    .clients-grid {
-        padding: 0;
-    }
+            .expertise-container .card,
+            .client-card {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                box-sizing: border-box;
+            }
+
+            .expertise-container {
+                padding: 1rem;
+            }
+
+            .expertise-column {
+                width: 100%;
+                padding: 0;
+            }
+
+            .expertise-container .card {
+                padding: 1.25rem;
+            }
+
+            .expertise-container .card,
+            .client-card {
+                margin-bottom: 1rem;
+            }
+
+            .clients-grid {
+                padding: 0;
+            }
 
 
         }
 
-        /* Navbar Styles */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             background: transparent;
-            /* Changed to transparent */
             z-index: 1000;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
@@ -525,7 +508,6 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: white;
-            /* Changed to white for better visibility on transparent background */
             text-decoration: none;
         }
 
@@ -540,7 +522,6 @@
 
         .navbar-link {
             color: white;
-            /* Changed to white for better visibility on transparent background */
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
@@ -578,7 +559,6 @@
             width: 24px;
             height: 2px;
             background: white;
-            /* Changed to white for better visibility on transparent background */
             position: relative;
             transition: var(--transition);
         }
@@ -590,7 +570,6 @@
             width: 24px;
             height: 2px;
             background: white;
-            /* Changed to white for better visibility on transparent background */
             transition: var(--transition);
         }
 
@@ -608,13 +587,20 @@
 
         .navbar-toggle.active .navbar-toggle-icon::before {
             transform: rotate(45deg);
+            top: 0;
         }
 
         .navbar-toggle.active .navbar-toggle-icon::after {
             transform: rotate(-45deg);
+            top: 0;
         }
 
-        /* Hero Code Symbol */
+        .navbar-toggle.active .navbar-toggle-icon::before,
+        .navbar-toggle.active .navbar-toggle-icon::after {
+            width: 0px;
+            left: 0;
+        }
+
         .hero-code-symbol {
             position: absolute;
             right: 15%;
@@ -626,22 +612,17 @@
             z-index: 1;
         }
 
-        /* Adjust spacing for the new navbar */
         .hero {
             margin-top: 0;
-            /* Removed margin-top since navbar is transparent */
         }
 
-        /* Responsive styles */
         @media (max-width: 768px) {
             .navbar-menu {
                 position: fixed;
                 top: 72px;
-                /* Fixed overlap issue - increased from 70px */
                 left: 0;
                 width: 100%;
                 background: rgba(255, 255, 255, 0.95);
-                /* Semi-transparent background */
                 padding: 1rem 0;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
                 transform: translateY(-150%);
@@ -661,7 +642,6 @@
 
             .navbar-link {
                 color: #333 !important;
-                /* Always black in mobile menu */
             }
 
             .navbar-toggle {
@@ -675,7 +655,6 @@
                 margin-right: 0;
             }
 
-            /* Fix for services grid */
             .clients-grid {
                 display: flex;
                 flex-direction: column;
@@ -693,9 +672,13 @@
             }
 
             .navbar-link.navbar-button {
-        background: var(--primary-gradient);
-        color: white !important;
-    }
+                background: var(--primary-gradient);
+                color: white !important;
+            }
+
+            .hero-code-symbol {
+                visibility: hidden;
+            }
         }
     </style>
 </head>
@@ -703,7 +686,7 @@
 <body>
     <header class="navbar" id="navbar">
         <div class="container navbar-container">
-            <a href="#" class="navbar-logo">Ceynova</a>
+            <a href="#" class="navbar-logo">CeyNova</a>
             <nav class="navbar-menu">
                 <ul class="navbar-links">
                     <li><a href="#hero" class="navbar-link">Home</a></li>
@@ -733,7 +716,7 @@
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">Why partner with Ceynova?</h2>
+            <h2 class="section-title">Why partner with CeyNova?</h2>
             <div class="expertise-container">
                 <div class="expertise-column">
                     <div class="card">
@@ -895,7 +878,7 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-column">
-                    <span class="footer-logo">Ceynova</span>
+                    <span class="footer-logo">CeyNova</span>
                 </div>
 
                 <div class="footer-column">
@@ -926,7 +909,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Ceynova - Ceylon Innovation. All rights reserved.</p>
+                <p>&copy; 2025 CeyNova - Ceylon Innovation. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -944,6 +927,7 @@
                 this.classList.toggle('active');
                 navbarMenu.classList.toggle('active');
             });
+
 
             // Hide/show navbar on scroll and change background color
             window.addEventListener('scroll', function () {
