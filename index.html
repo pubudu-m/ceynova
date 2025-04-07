@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceynova - Web, Mobile & AI Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #34d399 0%, #38bdf8 100%);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            /* Added smooth scrolling for entire body */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            /* Added smooth scrolling for html */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            text-align: left;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: black;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-vector {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            width: 40%;
+            max-width: 500px;
+        }
+
+        /* Section Titles */
+        section {
+            padding: 5rem 0;
+        }
+
+        section h2.section-title {
+            text-align: left;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .expertise-container {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .expertise-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .no-bold {
+            font-weight: normal;
+        }
+
+        .card {
+            background: #f9fafb;
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-middle {
+            text-align: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6ee7b7 0%, #60a5fa 100%);
+            color: white;
+        }
+
+        /* Services Section */
+        #services {
+            background-color: #f9fafb;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .client-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .client-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .client-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .client-description {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .chip-container {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .chip {
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: #E5E7EB;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: black;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: white;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: #f9fafb;
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Added icon styling */
+        .contact-icon {
+            font-size: 1.25rem;
+            color: #34d399;
+            margin-right: 1rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .contact-text h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-text p {
+            color: #6b7280;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Success message styling */
+        .success-message {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            /* background-color: #34d399; */
+            color: black;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-about {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+            max-width: 300px;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--primary-gradient);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+
+        /* Make it responsive */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .expertise-container {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem !important;
+            }
+
+            .footer-column {
+                flex: 0 0 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 4rem 0;
+            }
+
+            .card-middle {
+                background: #f9fafb;
+                color: black;
+                text-align: left;
+                /* Hide "Why choose CeyNova?" card on mobile */
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .clients-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+           
+            /* Standardize all card widths */
+    .expertise-container .card,
+    .client-card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure consistent container padding */
+    .expertise-container {
+        padding: 1rem;
+    }
+    
+    /* Adjust column width for expertise section */
+    .expertise-column {
+        width: 100%;
+        padding: 0;
+    }
+    
+    /* Match padding between both card types */
+    .expertise-container .card {
+        padding: 1.25rem; /* Same as client-card */
+    }
+    
+    /* Apply consistent margin to both card types */
+    .expertise-container .card,
+    .client-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Remove any custom margins from clients grid */
+    .clients-grid {
+        padding: 0;
+    }
+
+
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            /* Changed to transparent */
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar-hidden {
+            transform: translateY(-100%);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            /* Changed to white for better visibility on transparent background */
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .navbar-link {
+            color: white;
+            /* Changed to white for better visibility on transparent background */
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .navbar-link:hover {
+            color: #38bdf8;
+        }
+
+        .navbar-button {
+            display: inline-block;
+            background: white;
+            color: black;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .navbar-button:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .navbar-toggle-icon {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            /* Changed to white for better visibility on transparent background */
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .navbar-toggle-icon::before,
+        .navbar-toggle-icon::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: white;
+            /* Changed to white for better visibility on transparent background */
+            transition: var(--transition);
+        }
+
+        .navbar-toggle-icon::before {
+            transform: translateY(-8px);
+        }
+
+        .navbar-toggle-icon::after {
+            transform: translateY(8px);
+        }
+
+        .navbar-toggle.active .navbar-toggle-icon {
+            background: transparent;
+        }
+
+        .navbar-toggle.active .navbar-toggle-icon::before {
+            transform: rotate(45deg);
+        }
+
+        .navbar-toggle.active .navbar-toggle-icon::after {
+            transform: rotate(-45deg);
+        }
+
+        /* Hero Code Symbol */
+        .hero-code-symbol {
+            position: absolute;
+            right: 15%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.15);
+            z-index: 1;
+        }
+
+        /* Adjust spacing for the new navbar */
+        .hero {
+            margin-top: 0;
+            /* Removed margin-top since navbar is transparent */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                position: fixed;
+                top: 72px;
+                /* Fixed overlap issue - increased from 70px */
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                /* Semi-transparent background */
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+            }
+
+            .navbar-menu.active {
+                transform: translateY(0);
+            }
+
+            .navbar-links {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+
+            .navbar-link {
+                color: #333 !important;
+                /* Always black in mobile menu */
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+
+            .expertise-container .card,
+            .client-card {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            /* Fix for services grid */
+            .clients-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            .expertise-container {
+                max-width: 100%;
+            }
+
+            .client-card {
+                max-width: 100%;
+            }
+
+            .navbar-link.navbar-button {
+        background: var(--primary-gradient);
+        color: white !important;
+    }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="navbar-logo">Ceynova</a>
+            <nav class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="#hero" class="navbar-link">Home</a></li>
+                    <li><a href="#about" class="navbar-link">About</a></li>
+                    <li><a href="#services" class="navbar-link">Services</a></li>
+                    <li><a href="#contact" class="navbar-link navbar-button">Contact &rarr;</a></li>
+                </ul>
+            </nav>
+            <button class="navbar-toggle" id="navbar-toggle">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Transforming Ideas into Digital Reality</h1>
+                <p>We craft high-performance web, mobile, and AI solutions designed to accelerate your business and wow
+                    your users.</p>
+                <a href="#contact" class="cta-button">Let’s build the future &rarr;</a>
+            </div>
+            <div class="hero-code-symbol">&lt;/&gt;</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Why partner with Ceynova?</h2>
+            <div class="expertise-container">
+                <div class="expertise-column">
+                    <div class="card">
+                        <h2>Founded by a Google Developer Expert</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Driven by a World-Class Developer Team</h3>
+                        <p>Experienced engineers with a global track record of delivering enterprise-grade solutions.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h2>Over 5 Years of Industry Experience</h2>
+                    </div>
+                </div>
+                <div class="expertise-column">
+                    <div class="card">
+                        <h3>Global Footprint</h3>
+                        <p>Headquartered in New Zealand & Sri Lanka</p>
+                    </div>
+                    <div class="card card-middle">
+                        <h1>Built by Experts, Driven by Passion</h1>
+                    </div>
+                    <div class="card">
+                        <h3>Future-Ready Tech Stack</h3>
+                        <p>We use the latest technologies to ensure your product stays ahead.
+                        </p>
+                    </div>
+                </div>
+                <div class="expertise-column">
+                    <div class="card">
+                        <h2>Proven Track Record with Enterprise-Level Solutions</h2>
+                    </div>
+                    <div class="card">
+                        <h3>Client-First Philosophy</h3>
+                        <p>We treat every project like our own—transparent, high-quality, and built to last.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Startup Speed, Enterprise Perspective</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Solutions we build.</h2>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-icon">📱</div>
+                    <h3 class="client-title">Mobile Apps</h3>
+                    <p class="client-description">Native iOS/Android and Flutter apps built for performance — App Store
+                        & Play Store ready.</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🌐</div>
+                    <h3 class="client-title">Web Apps</h3>
+                    <p class="client-description">From sleek landing pages to robust platforms — fast, responsive, and
+                        user-focused.</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🚀</div>
+                    <h3 class="client-title">AI Solutions</h3>
+                    <p class="client-description">Chatbots, smart search, personalized recommendations — we make AI
+                        practical and powerful.</p>
+                </div>
+            </div>
+            <div class="chip-container">
+                <div class="chip">#ScalableByDesign</div>
+                <div class="chip">#InnovationDriven</div>
+                <div class="chip">#FutureReady</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let’s bring your vision to life.</h2>
+            <div class="contact-container">
+                <!-- Contact Info Column -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-text">
+                            <h3 class="no-bold">Whether you're starting small or scaling big — from MVPs to full-scale
+                                platforms, we’re here to help.</h3>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>info@ceynova.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+64 22 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>123 Queen Street, Auckland CBD</p>
+                            <p>Auckland 1010, New Zealand</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile" class="form-label">Mobile</label>
+                            <input type="text" id="mobile" name="mobile" class="form-control"
+                                placeholder="+94701234567">
+                        </div>
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company</label>
+                            <input type="text" id="company" name="company" class="form-control"
+                                placeholder="Your Company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Inquire Now</button>
+                        <div id="successMessage" class="success-message">Thanks for reaching out! We'll be in touch
+                            shortly.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <span class="footer-logo">Ceynova</span>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mobile Development</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">AI Engineering</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Menu</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Solutions</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Socials</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ceynova - Ceylon Innovation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Variables
+            const navbar = document.getElementById('navbar');
+            const navbarToggle = document.getElementById('navbar-toggle');
+            const navbarMenu = document.querySelector('.navbar-menu');
+            let lastScrollTop = 0;
+
+            // Toggle mobile menu
+            navbarToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                navbarMenu.classList.toggle('active');
+            });
+
+            // Hide/show navbar on scroll and change background color
+            window.addEventListener('scroll', function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const navButton = document.querySelector('.navbar-button');
+
+                // Change navbar background color when scrolling
+                if (scrollTop > 50) {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                    navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                    document.querySelector('.navbar-logo').style.color = '#333';
+                    document.querySelectorAll('.navbar-link:not(.navbar-button)').forEach(link => {
+                        link.style.color = '#333';
+                    });
+                    document.querySelectorAll('.navbar-toggle-icon::before, .navbar-toggle-icon::after').forEach(el => {
+                        el.style.background = '#333';
+                    });
+                    document.querySelector('.navbar-toggle-icon').style.background = '#333';
+
+                    // Set gradient background for button when scrolled
+                    navButton.style.background = 'linear-gradient(135deg, #6ee7b7 0%, #60a5fa 100%)';
+                    navButton.style.color = 'white';
+                } else {
+                    navbar.style.backgroundColor = 'transparent';
+                    navbar.style.boxShadow = 'none';
+                    document.querySelector('.navbar-logo').style.color = 'white';
+                    document.querySelectorAll('.navbar-link:not(.navbar-button)').forEach(link => {
+                        link.style.color = 'white';
+                    });
+                    document.querySelector('.navbar-toggle-icon').style.background = 'white';
+
+                    // Set white background with black text for button when at top
+                    navButton.style.background = 'white';
+                    navButton.style.color = 'black';
+                }
+
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down & past the navbar height
+                    navbar.classList.add('navbar-hidden');
+                } else {
+                    // Scrolling up
+                    navbar.classList.remove('navbar-hidden');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+
+            // Close mobile menu when clicking a nav link
+            document.querySelectorAll('.navbar-link').forEach(link => {
+                link.addEventListener('click', function () {
+                    navbarToggle.classList.remove('active');
+                    navbarMenu.classList.remove('active');
+                });
+            });
+
+            // Handle navbar style for pseudo-elements on scroll
+            function updateNavbarToggleStyles() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const toggleIcon = document.querySelector('.navbar-toggle-icon');
+
+                if (scrollTop > 50) {
+                    toggleIcon.style.background = '#333';
+                    // Since we can't directly select pseudo-elements with JS,
+                    // we're adding a class to handle the color change
+                    toggleIcon.classList.add('scrolled');
+                } else {
+                    toggleIcon.style.background = toggleIcon.classList.contains('active') ? 'transparent' : 'white';
+                    toggleIcon.classList.remove('scrolled');
+                }
+            }
+
+            // Call on load and scroll
+            updateNavbarToggleStyles();
+            window.addEventListener('scroll', updateNavbarToggleStyles);
+        });
+
+        // Form submission handler
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent page reload
+
+            // Show success message
+            successMessage.style.display = 'block';
+
+            // Reset form fields
+            contactForm.reset();
+
+            // Hide message after 10 seconds
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+            }, 10000);
+        });
+    </script>
+
+    <style>
+        /* Add this to handle pseudo-element styling for the navbar toggle */
+        .navbar-toggle-icon.scrolled::before,
+        .navbar-toggle-icon.scrolled::after {
+            background: #333 !important;
+        }
+
+        .navbar-toggle-icon::before,
+        .navbar-toggle-icon::after {
+            background: white;
+        }
+
+        .navbar-toggle.active .navbar-toggle-icon::before,
+        .navbar-toggle.active .navbar-toggle-icon::after {
+            background: white;
+        }
+    </style>
+</body>
+
+</html>
